@@ -1,0 +1,15 @@
+{
+  "name": "react-redux-lab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:chankruze/react-redux-lab.git",
+  "author": "chankruze <chankruze@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "redux": "^4.0.5"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  }
+}
