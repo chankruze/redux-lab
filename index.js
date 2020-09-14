@@ -5,7 +5,12 @@ Created: Sun Sep 13 2020 18:17:31 GMT+0530 (India Standard Time)
 Copyright (c) Geekofia 2020 and beyond
 */
 const redux = require('redux')
+const reduxLogger = require('redux-logger')
+
 // const createStore = redux.createStore
+// const combineReducers = redux.combineReducers
+// const applyMiddleware = redux.applyMiddleware
+const logger = reduxLogger.createLogger()
 
 const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
@@ -91,11 +96,11 @@ const rootReducer = redux.combineReducers({
 
 // 1: holds application state
 // const store = redux.createStore(reducer)
-const store = redux.createStore(rootReducer)
+const store = redux.createStore(rootReducer, redux.applyMiddleware(logger))
 // 2: allows access to state via getState()
 console.log('Initial state', store.getState())
 // 4: registers listener via subscriber(listener)
-const unsubscribe = store.subscribe(() => console.log('Updated state', store.getState()))
+const unsubscribe = store.subscribe(() => {})
 // 3: allows state to be updated vua dispatch(action)
 store.dispatch(buyCake())
 store.dispatch(buyCake())
