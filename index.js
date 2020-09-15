@@ -15,7 +15,7 @@ const logger = reduxLogger.createLogger()
 const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
 
-// action creator
+// action creator (returns action object)
 function buyCake() {
     return {
         type: BUY_CAKE,

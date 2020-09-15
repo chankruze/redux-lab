@@ -44,6 +44,7 @@ const fetchUsersFailure = (err) => {
     }
 }
 
+// action creator (returns function + action object)
 // thunk middleware make action creator return a function for performing side effects
 const fetchUsers = () => {
     return function (dispatch) {
